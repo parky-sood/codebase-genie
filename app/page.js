@@ -108,9 +108,9 @@ export default function Chatbot() {
     e.preventDefault();
     if (!input.trim() || !selectedNamespace) return;
 
+    const copyInput = input;
     setInput("");
 
-    const copyInput = input;
     const userMessage = {
       sender: "user",
       text: copyInput,
@@ -128,6 +128,7 @@ export default function Chatbot() {
         ...prev,
         [selectedNamespace]: [...(prev[selectedNamespace] || []), userMessage],
       }));
+
       const response = await fetch("/api/getDetails", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -136,6 +137,8 @@ export default function Chatbot() {
           namespace: selectedNamespace,
         }),
       });
+
+      console.log("after getDetails");
       const data = await response.json();
       const botMessage = {
         sender: "bot",
