@@ -7,7 +7,7 @@
 - **Supports Multiple Languages:** Works seamlessly with repositories written in various programming languages.
 - **Search and Explanation:** Offers explanations for specific functions, classes, files, or general architecture.
 
-![image](https://github.com/user-attachments/assets/325f5479-dbd4-4888-88b5-a6732c9c5063")
+<img width="1511" src="https://github.com/user-attachments/assets/325f5479-dbd4-4888-88b5-a6732c9c5063">
 
 ## How it Works
 1. **Embedding Creation:**
@@ -29,9 +29,28 @@
 
 ## Installation
 1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/parky-sood/codebase-genie.git
+   cd codebase-genie
+   ```
 2. **Install Dependencies:**
-3. **Set Up Environment Variables:**
-4. **Run the Application:**
+```bash
+npm install
+```
+4. **Set Up Environment Variables:**
+```env
+PINECONE_API_KEY=your-api-key
+PINECONE_ENVIRONMENT=your-pinecone-db-region
+PINECONE_INDEX_HOST=your-pinecone-db-host
+GROQ_API_KEY=your-api-key
+HUGGINGFACE_API_KEY=your-api-key
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your-db-anon-key
+NEXT_PUBLIC_SUPABASE_URL=your-db-url
+```
+6. **Run the Application:**
+```bash
+npm run dev
+```
 
 ## Usage
 1. **Ask Questions:** Interact with chatbot by asking questions about the repository
@@ -41,7 +60,7 @@
 
 ### Backend
 - Python to create embeddings in Pinecone
-- Node.js to utilize Pinecone SDK andn fetch embeddings
+- Node.js to utilize Pinecone SDK and fetch embeddings
 
 ### Frontend
 - NextJS and React with Tailwind CSS to provide sleek and simple UI
