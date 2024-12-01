@@ -11,6 +11,13 @@ import "prismjs/components/prism-jsx";
 import "prismjs/components/prism-typescript";
 import "prismjs/components/prism-bash";
 import "prismjs/components/prism-json";
+import {
+  Tooltip,
+  TooltipProvider,
+  TooltipTrigger,
+  TooltipContent,
+} from "@/components/ui/tooltip";
+import { Send } from "lucide-react";
 
 export default function Chatbot() {
   const [input, setInput] = useState("");
@@ -182,9 +189,16 @@ export default function Chatbot() {
             placeholder="Ask about the codebase..."
             className="chat-input rounded-full"
           />
-          <button type="submit" className="submit-btn rounded-full">
-            Send
-          </button>
+          <TooltipProvider delayDuration={100}>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <button type="submit" className="submit-btn rounded-full">
+                  <Send className="w-4 h-4" />
+                </button>
+              </TooltipTrigger>
+              <TooltipContent>Send</TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
         </form>
       </div>
     </div>
