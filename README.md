@@ -6,7 +6,8 @@
 - **Retrieval-Augmented Generation:** Combines embeddings and context retrieval to provide accurate and relevant responses.
 - **Supports Multiple Languages:** Works seamlessly with repositories written in various programming languages.
 - **Search and Explanation:** Offers explanations for specific functions, classes, files, or general architecture.
-- **Live Updates:** Keeps up-to-date with the latest changes in the repository.
+
+![image](https://github.com/user-attachments/assets/325f5479-dbd4-4888-88b5-a6732c9c5063")
 
 ## How it Works
 1. **Embedding Creation:**
@@ -17,6 +18,9 @@
    - Llama 3.1 LLM generates human-readable responses to queries based on retrieved .context from Pinecone
 3. **Interface:**
    - A simple and intuitive chatbot interface lets users ask questions to repositories.
+
+![image](https://github.com/user-attachments/assets/77119592-09f1-48ee-bb33-48cb77a12488)
+
 
 ## Prerequisites
 - Node.js (v16 or higher)
